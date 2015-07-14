@@ -43,7 +43,6 @@ $app->post('/contact', function() use($app){
 	}
 
 	$transport = Swift_SendmailTransport::newInstance('/usr/sbin/sendmail -bs');
-	// $transport->setEncryption('ssl');
 	$mailer = \Swift_Mailer::newInstance($transport);
 	$message = \Swift_Message::newInstance();
 	$message->setSubject('Email from the website');
